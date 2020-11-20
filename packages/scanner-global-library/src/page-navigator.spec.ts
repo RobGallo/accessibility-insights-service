@@ -40,7 +40,7 @@ describe(PageNavigator, () => {
         pageMock
             .setup(async (o) =>
                 o.goto(url, {
-                    waitUntil: 'networkidle0',
+                    // waitUntil: 'networkidle0',
                     timeout: pageNavigator.gotoTimeoutMsecs,
                 }),
             )
@@ -72,7 +72,7 @@ describe(PageNavigator, () => {
         pageMock
             .setup(async (o) =>
                 o.goto(url, {
-                    waitUntil: 'networkidle0',
+                    // waitUntil: 'networkidle0',
                     timeout: pageNavigator.gotoTimeoutMsecs,
                 }),
             )
@@ -103,7 +103,7 @@ describe(PageNavigator, () => {
         pageMock
             .setup(async (o) =>
                 o.goto(url, {
-                    waitUntil: 'networkidle0',
+                    // waitUntil: 'networkidle0',
                     timeout: pageNavigator.gotoTimeoutMsecs,
                 }),
             )
