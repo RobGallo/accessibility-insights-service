@@ -31,7 +31,6 @@ export class PageNavigator {
         let response: Response;
         try {
             response = await page.goto(url, {
-                waitUntil: 'networkidle0',
                 timeout: this.gotoTimeoutMsecs,
             });
         } catch (err) {
