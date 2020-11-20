@@ -32,7 +32,7 @@ export abstract class PageProcessorBase implements PageProcessor {
     /**
      * Timeout in which page navigation needs to finish, in seconds.
      */
-    public readonly gotoTimeoutMsecs = 30000;
+    public readonly gotoTimeoutMsecs = 500000;
     public readonly pageRenderingTimeoutMsecs = 5000;
 
     protected readonly baseUrl: string;

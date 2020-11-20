@@ -21,7 +21,7 @@ describe('PageScanRequestProvider.Db', () => {
 
         beforeAll(async () => {
             await dbHelper.init('test-db', ' page-scan-requests');
-        }, 30000);
+        }, 500000);
 
         beforeEach(() => {
             const loggerMock = Mock.ofType<MockableLogger>();

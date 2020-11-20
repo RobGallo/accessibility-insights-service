@@ -72,7 +72,7 @@ describe(NotificationSenderWebAPIClient, () => {
             const requestBody = { scanId: scanId, runStatus: runStatus, scanStatus: isEmpty(scanStatus) ? undefined : scanStatus };
             const options = {
                 json: requestBody,
-                timeout: 30000,
+                timeout: 500000,
             };
 
             postMock

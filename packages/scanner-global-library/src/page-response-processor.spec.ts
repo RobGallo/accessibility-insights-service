@@ -100,7 +100,7 @@ describe('handles navigation errors', () => {
 
     const testCaseMappings: NavigationErrorTestCase[] = [
         {
-            message: 'TimeoutError: Navigation Timeout Exceeded: 30000ms exceeded\n    at Promise.then (',
+            message: 'TimeoutError: Navigation Timeout Exceeded: 500000ms exceeded\n    at Promise.then (',
             errorType: 'UrlNavigationTimeout',
             stack: 'stack',
         },

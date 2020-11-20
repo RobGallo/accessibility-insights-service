@@ -35,7 +35,7 @@ export class NotificationSenderWebAPIClient {
             runStatus: notificationSenderConfigData.runStatus,
             scanStatus: isEmpty(notificationSenderConfigData.scanStatus) ? undefined : notificationSenderConfigData.scanStatus,
         };
-        const options: Options = { json: requestBody, timeout: 30000 };
+        const options: Options = { json: requestBody, timeout: 500000 };
 
         return (await this.defaultRequestObject.post(notificationSenderConfigData.scanNotifyUrl, options)) as ResponseWithBodyType;
     }

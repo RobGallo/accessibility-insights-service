@@ -26,7 +26,7 @@ describe('OnDemandPageScanRunResultProvider.Db', () => {
 
         beforeAll(async () => {
             await dbHelper.init('test-db', 'page-scan-run-results');
-        }, 30000);
+        }, 500000);
 
         beforeEach(() => {
             const loggerMock = Mock.ofType<MockableLogger>();
