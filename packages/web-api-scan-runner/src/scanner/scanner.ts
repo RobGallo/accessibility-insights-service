@@ -30,22 +30,30 @@ export class Scanner {
 
     private async scanImpl(url: string): Promise<AxeScanResults> {
         try {
+            console.log('scanner 1');
             this.logger.logInfo(`Starting accessibility website page scanning.`, { url });
             await this.page.create();
+            console.log('scanner 2');
             const scanResult = await this.page.scanForA11yIssues(url);
+            console.log('scanner 3');
             this.logger.logInfo(`Accessibility scanning of website page successfully completed.`, { url });
+            console.log('scanner 4');
 
             return scanResult;
         } catch (error) {
             this.logger.logError(`An error occurred while scanning website page.`, { url, error: System.serializeError(error) });
+            console.log('scanner 5');
 
             // throw service originated error to indicate a service failure
             throw error;
         } finally {
             try {
+                console.log('scanner 6');
                 await this.page.close();
+                console.log('scanner 7');
             } catch (error) {
                 this.logger.logError('An error occurred while closing web browser.', { url, error: System.serializeError(error) });
+                console.log('scanner 8');
             }
         }
     }
