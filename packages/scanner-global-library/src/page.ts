@@ -48,6 +48,7 @@ export class Page {
 
         if (scanResults?.error !== undefined) {
             console.log('page 6');
+
             return scanResults;
         }
 
